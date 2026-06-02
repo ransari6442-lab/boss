@@ -19,11 +19,6 @@
   fbq('init', '973272185548564');
   fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=973272185548564&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
 
   <style>
     *{
@@ -34,19 +29,16 @@
     }
 
     body{
-      background:linear-gradient(135deg,#020814 0%,#07192f 50%,#020814 100%);
+      background:linear-gradient(135deg,#020814,#07192f,#020814);
       min-height:100vh;
       display:flex;
       justify-content:center;
       align-items:center;
       padding:18px;
       color:#fff;
-      overflow:hidden;
     }
 
     .card{
-      position:relative;
-      overflow:hidden;
       width:100%;
       max-width:420px;
       background:rgba(7,17,31,.95);
@@ -54,22 +46,21 @@
       padding:30px 22px;
       text-align:center;
       border:1px solid rgba(255,255,255,.08);
-      backdrop-filter:blur(15px);
-      box-shadow:0 0 30px rgba(0,0,0,.5),0 0 80px rgba(0,140,255,.12);
+      box-shadow:0 0 40px rgba(0,140,255,.15);
     }
 
-    .profile-glow{
-      width:170px;
-      height:170px;
+    .profile{
+      width:160px;
+      height:160px;
+      margin:auto;
       border-radius:50%;
       padding:5px;
-      background:linear-gradient(45deg,#00d9ff,#0088cc,#00d9ff,#229ed9);
+      background:linear-gradient(45deg,#00d9ff,#0088cc,#229ed9);
       background-size:300% 300%;
       animation:glow 5s linear infinite;
-      margin:auto;
     }
 
-    .profile-glow img{
+    .profile img{
       width:100%;
       height:100%;
       border-radius:50%;
@@ -83,16 +74,15 @@
     }
 
     .title{
-      font-size:38px;
-      font-weight:800;
+      font-size:36px;
       color:#00d9ff;
       margin-top:15px;
-      text-shadow:0 0 15px rgba(0,217,255,.5);
+      font-weight:800;
     }
 
     .subtitle{
-      font-size:16px;
-      color:#d7dde5;
+      font-size:15px;
+      color:#cfd8e3;
       margin:15px 0 25px;
       line-height:1.6;
     }
@@ -100,70 +90,45 @@
     .btn{
       display:block;
       width:100%;
-      text-decoration:none;
       background:linear-gradient(90deg,#229ed9,#0088cc);
+      padding:16px;
+      border-radius:14px;
       color:#fff;
-      padding:18px;
-      border-radius:16px;
-      font-size:20px;
+      text-decoration:none;
+      font-size:18px;
       font-weight:700;
       box-shadow:0 0 25px rgba(0,136,204,.4);
     }
 
+    .timer-box{
+      margin-top:18px;
+      padding:12px;
+      background:#0c1728;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.08);
+      font-size:16px;
+      color:#fff;
+    }
+
+    .timer{
+      color:#00d9ff;
+      font-weight:800;
+      font-size:20px;
+    }
+
     .footer{
       margin-top:18px;
-      font-size:14px;
+      font-size:13px;
       color:#4fc3ff;
-    }
-
-    /* OVERLAY */
-    .overlay{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:rgba(0,0,0,0.85);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      z-index:999;
-    }
-
-    .loader{
-      width:60px;
-      height:60px;
-      border:5px solid #ffffff33;
-      border-top:5px solid #00d9ff;
-      border-radius:50%;
-      animation:spin 1s linear infinite;
-      margin-bottom:20px;
-    }
-
-    @keyframes spin{
-      100%{transform:rotate(360deg);}
-    }
-
-    .count{
-      font-size:20px;
-      color:#fff;
-      font-weight:600;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Redirect Overlay -->
-  <div class="overlay" id="overlay">
-    <div class="loader"></div>
-    <div class="count">Redirecting in <span id="timer">2</span> seconds...</div>
-  </div>
-
   <div class="card">
 
-    <div class="profile-glow">
+    <div class="profile">
       <img src="https://i.ibb.co/qMtNXHd7/Whats-App-Image-2026-03-17-at-9-44-37-PM.jpg" alt="Profile">
     </div>
 
@@ -171,12 +136,17 @@
 
     <div class="subtitle">
       Join our official Telegram community for updates,
-      announcements, news and educational content.
+      announcements and educational content.
     </div>
 
-    <a href="https://t.me/+Iho2g6_HqUkwMjc1" class="btn" target="_blank">
+    <a href="https://t.me/+Iho2g6_HqUkwMjc1" class="btn">
       🚀 JOIN TELEGRAM CHANNEL
     </a>
+
+    <!-- TIMER (VISIBLE ON PAGE) -->
+    <div class="timer-box">
+      Redirecting in <span class="timer" id="timer">2</span> seconds...
+    </div>
 
     <div class="footer">
       Official Community Access
