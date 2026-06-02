@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BOSS | Official Telegram Community</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:linear-gradient(
+        135deg,
+        #020814 0%,
+        #07192f 50%,
+        #020814 100%
+      );
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:18px;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      width:100%;
+      max-width:420px;
+      background:rgba(7,17,31,.95);
+      border-radius:30px;
+      padding:30px 22px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(15px);
+      box-shadow:
+        0 0 30px rgba(0,0,0,.5),
+        0 0 80px rgba(0,140,255,.12);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:#00d9ff20;
+      filter:blur(100px);
+      top:-100px;
+      left:-100px;
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      width:250px;
+      height:250px;
+      background:#ff00cc15;
+      filter:blur(100px);
+      bottom:-100px;
+      right:-100px;
+    }
+
+    .card > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .profile-wrap{
+      display:flex;
+      justify-content:center;
+      margin-bottom:24px;
+    }
+
+    .profile-glow{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      padding:5px;
+      background:linear-gradient(
+        45deg,
+        #00d9ff,
+        #0088cc,
+        #00d9ff,
+        #229ed9
+      );
+      background-size:300% 300%;
+      animation:glow 5s linear infinite;
+      box-shadow:
+        0 0 20px #00d9ff,
+        0 0 40px #0088cc;
+    }
+
+    .profile-glow img{
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #07111f;
+      display:block;
+    }
+
+    @keyframes glow{
+      0%{background-position:0% 50%;}
+      100%{background-position:300% 50%;}
+    }
+
+    .title{
+      font-size:38px;
+      font-weight:800;
+      color:#00d9ff;
+      letter-spacing:2px;
+      margin-bottom:10px;
+      text-shadow:0 0 15px rgba(0,217,255,.5);
+    }
+
+    .subtitle{
+      font-size:16px;
+      line-height:1.7;
+      color:#d7dde5;
+      margin-bottom:28px;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      text-decoration:none;
+      background:linear-gradient(
+        90deg,
+        #229ed9,
+        #0088cc
+      );
+      color:#fff;
+      padding:18px;
+      border-radius:16px;
+      margin-top:18px;
+      font-size:20px;
+      font-weight:700;
+      transition:.3s ease;
+      box-shadow:0 0 25px rgba(0,136,204,.4);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 0 40px rgba(0,136,204,.8);
+    }
+
+    .disclaimer{
+      margin-top:28px;
+      font-size:13px;
+      color:#b9c4d1;
+      line-height:1.8;
+      background:#0c1728;
+      padding:14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.05);
+    }
+
+    .footer{
+      margin-top:22px;
+      font-size:15px;
+      color:#4fc3ff;
+      font-weight:600;
+    }
+
+    @media(max-width:480px){
+
+      .card{
+        padding:24px 18px;
+      }
+
+      .profile-glow{
+        width:145px;
+        height:145px;
+      }
+
+      .title{
+        font-size:31px;
+      }
+
+      .subtitle{
+        font-size:15px;
+      }
+
+      .btn{
+        font-size:18px;
+        padding:15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="profile-wrap">
+      <div class="profile-glow">
+        <img src="https://i.ibb.co/qMtNXHd7/Whats-App-Image-2026-03-17-at-9-44-37-PM.jpg" alt="Profile">
+      </div>
+    </div>
+
+    <div class="title">BOSS</div>
+
+    <div class="subtitle">
+      Join our official Telegram community for updates,
+      announcements, news and educational content.
+    </div>
+
+    <a
+      href="https://t.me/+Iho2g6_HqUkwMjc1"
+      class="btn"
+      target="_blank"
+    >
+      🚀 JOIN TELEGRAM CHANNEL
+    </a>
+
+    <div class="disclaimer">
+      Disclaimer: This page is created for informational,
+      educational and community engagement purposes only.
+      We do not guarantee earnings, financial returns,
+      or fixed outcomes. Users should independently verify
+      any information before taking action.
+    </div>
+
+    <div class="footer">
+      Official Community Access
+    </div>
+
+  </div>
+
+</body>
+</html>
